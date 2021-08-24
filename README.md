@@ -29,8 +29,8 @@ yarn codegen
 
 yarn build
 
-yarn graph init --studio <<subgraph-name>>
+yarn graph init --studio "subgraph-name"
   
-yarn graph auth --studio <deploy-key>
+yarn graph auth --studio "deploy-key"
   
-yarn graph deploy --studio <subgraph-name>
+yarn graph deploy --studio "subgraph-name"
