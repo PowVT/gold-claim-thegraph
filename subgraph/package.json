@@ -1,0 +1,23 @@
+{
+  "name": "gold-claim",
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "scripts": {
+    "codegen": "graph codegen",
+    "build": "graph build",
+    "deploy": "graph deploy --node https://api.thegraph.com/deploy/PowVT/adaptive-claim 2bf95fe9d262e0e7296fb54df093ef14 --ipfs https://api.thegraph.com/ipfs/",
+    "create-local": "graph create --node http://localhost:8020/ scaffold-eth/claim-token",
+    "remove-local": "graph remove --node http://localhost:8020/ scaffold-eth/claim-token",
+    "deploy-local": "graph deploy --node http://localhost:8020/ --ipfs http://localhost:5001 scaffold-eth/claim-token"
+  },
+  "dependencies": {
+    "@graphprotocol/graph-cli": "0.21.0",
+    "@graphprotocol/graph-ts": "0.20.1"
+  },
+  "devDependencies": {
+    "mustache": "^3.1.0"
+  },
+  "description": "Generic Claims explorer.",
+  "main": "index.js",
+  "author": "PowVT"
+}

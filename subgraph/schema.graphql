@@ -1,0 +1,33 @@
+type Claim @entity {
+  id: ID!
+  material: String!
+  barcodeId: BigInt!
+  assetManager: Manager!
+  currentOwner: Bytes!
+  propertiesHash: String!
+  exists: Boolean!
+  value: BigInt!
+  beneficiaryPay: BigInt!
+  onMarket: Boolean!
+  sold: Boolean!
+}
+
+type Manager @entity {
+  id: ID!
+  address: Bytes!
+  claims: [Claim!]! @derivedFrom(field: "assetManager")
+}
+
+type Total @entity {
+  id: ID!
+  day: BigInt
+  tokens: BigInt
+  sales: BigInt
+}
+
+type DailyTotal @entity {
+  id: ID!
+  day: BigInt
+  tokens: BigInt
+  sales: BigInt
+}

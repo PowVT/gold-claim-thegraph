@@ -1,0 +1,29 @@
+specVersion: 0.0.2
+schema:
+  file: ./schema.graphql
+dataSources:
+  - kind: ethereum/contract
+    name: ClaimToken
+    network: xdai
+    source:
+      address: "0xcc86Cd1c69d2da0Ca40a157b83e732425002181e"
+      abi: ClaimToken
+      startBlock: 17742000
+    mapping:
+      kind: ethereum/events
+      apiVersion: 0.0.4
+      language: wasm/assemblyscript
+      entities:
+        - Claim
+        - AssetManager
+      abis:
+        - name: ClaimToken
+          file: ./abis/ClaimToken.json
+      eventHandlers:
+        - event: newClaimCreated(uint256,uint256,address,string,bool,uint256,string)
+          handler: handleNewClaimCreated
+        - event: OnMarket(uint256,address)
+          handler: handleOnMarket
+        - event: Sold(uint256,address,uint256)
+          handler: handleSold
+      file: ./mapping.ts

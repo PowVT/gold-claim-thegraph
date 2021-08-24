@@ -1,0 +1,10 @@
+{
+  "AttestorAddress": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+  "goldClaimAddress": "0x29190599b3a9f193B95E91cAA60E723f6c756518",
+  "IncentiveTokenVendorAddress": "0x63669D57D6C860f4DB4385E3e11bd3A02867f8c2",
+  "MintIncentiveTokenAddress": "0xb3897eBF6279baDF3908b8b5793A3Df1Eef62f88",
+  "AdaptiveTokenVendorAddress": "0x0DCE1EBd48D66AE2ad6078b15ca3AC1aFD8396d2",
+  "ClaimTokenAddress": "0xcc86Cd1c69d2da0Ca40a157b83e732425002181e",
+  "MintAdaptiveTokenAddress": "0xF641283f940f6C89134461772A3281BF630aBc62",
+  "BeneficiaryStreamAddress": "0x0713565522a8Ac9E2963e5a386e307dc9F8E0f26"
+}
